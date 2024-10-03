@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: flask10
+    labels:
+        run: flask10
+spec:
+    type: NodePort
+    ports:
+    - port: 5011
+      targetPort: 5000
+      protocol: TCP
+      name: http
+    selector:
+      run: flask10

@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: flask10
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            run: flask10-application
+    template:
+        metadata:
+            labels:
+                run: flask10application
+        spec:
+            containers:
+            - name: flask10-application
+              image: adminguytesting/flask10:1.0.0
+              ports:
+                  - containerPort: 5000
+              imagePullPolicy: Always
