@@ -29,7 +29,7 @@ spec:
         run: flask10-application
     spec:
       containers:
-      - image: adminguytesting/flask10:2.0.0
+      - image: adminguytesting/flask10:1.0.0
         imagePullPolicy: Always
         name: flask10-application
         ports:
